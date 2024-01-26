@@ -40,8 +40,8 @@ public class Triangle {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-//		
-//
+		
+
 		int triangle[] = new int[3];
 		for (int a = 0; a < triangle.length; a++) {
 			triangle[a] = sc.nextInt();
