@@ -9,32 +9,30 @@ import java.util.Scanner;
 public class Triangle {
 
 	public static void triangleSide(int a[]) {
-		if(a[0]==a[1]&&a[1]==a[2]) {
-			 System.out.println("這是正三角形");
-			 
-		 }else if(a[0]==a[1]||a[1]==a[2]||a[0]==a[2]){
-			 System.out.println("這是等腰三角形");
-			 
-			 
-		 }else if(a[0]==0||a[1]==0||a[2]==0){
-			 System.out.println("這不是三角形");
-			 
-		 }else if(a[0]!=a[1] && a[2]!=a[1]){
-			 
-			 System.out.println("其他三角形");
-			 
-			if(Math.pow(a[0], 2)+Math.pow(a[1], 2)==Math.pow(a[2], 2) ||Math.pow(a[1], 2)+Math.pow(a[2], 2)==Math.pow(a[0], 2)
-				||	Math.pow(a[0], 2)+Math.pow(a[2], 2)==Math.pow(a[1], 2)	)
-			 {
-		 System.out.println("這也是直角三角");
-		 
-			 }
- }
-		 
-			 
-			
+		if ((a[0] + a[1]) < a[2] || (a[1] + a[2]) < a[0] || (a[0] + a[2] < a[1])) {
+			System.out.println("這不合乎三角形");
+		}
 
-		
+		else if (a[0] == a[1] && a[1] == a[2]) {
+			System.out.println("這是正三角形");
+
+		} else if (a[0] == a[1] || a[1] == a[2] || a[0] == a[2]) {
+			System.out.println("這是等腰三角形");
+		} else if (a[0] == 0 || a[1] == 0 || a[2] == 0) {
+			System.out.println("這不是三角形");
+
+		} else if (a[0] != a[1] && a[2] != a[1]) {
+
+			System.out.println("其他三角形");
+
+		} if (Math.pow(a[0], 2) + Math.pow(a[1], 2) == Math.pow(a[2], 2)
+				|| Math.pow(a[1], 2) + Math.pow(a[2], 2) == Math.pow(a[0], 2)
+				|| Math.pow(a[0], 2) + Math.pow(a[2], 2) == Math.pow(a[1], 2)) {
+
+			System.out.println("這是直角三角");
+
+		}
+
 	}
 
 	public static void main(String[] args) {
@@ -48,8 +46,6 @@ public class Triangle {
 
 		}
 		triangleSide(triangle);
-
-
 
 	}
 
